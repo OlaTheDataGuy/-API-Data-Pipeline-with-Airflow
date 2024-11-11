@@ -1,18 +1,21 @@
-# API Data Extraction and Cleaning with Airflow DAG
+# API Data Extraction, Cleaning, and Visualization Pipeline with Airflow DAG and Looker
 
 Overview
 ===========
 
-This project provides a data pipeline that extracts property listings from the **Bayut API**, cleans the extracted data, and orchestrates the workflow using an **Airflow DAG**. The pipeline involves the following tasks:
+This project implements a robust data pipeline to extract, clean, and visualize property listings data sourced from the Bayut API. The process is orchestrated using Apache Airflow and incorporates data visualization through Looker to enable insightful analysis of the property listings. The pipeline includes the following key steps:
 
 - **Extract API Data**: Retrieves property listings from the Bayut API and saves them to a CSV file.
 - **Clean Data**: Cleans the raw data by processing specific fields, then saves the cleaned data to a new CSV.
-- **Airflow DAG**: Orchestrates the process of data extraction and cleaning through Apache Airflow.
+- **Orchestrate with Airflow DAG**: Orchestrates the process of data extraction and cleaning through Apache Airflow.
+- **Data Visualization with Looker**: Loads the cleaned data into Looker for visual insights, including metrics.
+
+
 
 Project Contents
 ================
 
-- dags: This folder contains the Python files for your Airflow DAGs. By default, this directory includes one example DAG.
+- dags/: This folder contains the Python files for your Airflow DAGs. 
 
 -  **`extract_api_data.py`**: 
    - Connects to the **Bayut API**.
